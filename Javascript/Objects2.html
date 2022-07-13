@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Custom Objects</title>
+	<script type="text/javascript">
+		function display(obj){
+			document.write("<br>"+obj.name+"<br>")
+			document.write(obj.age+"<br>")
+			document.write(obj.salary+"<br>")
+			document.write(obj.designation+"<br>")
+		}
+	</script>
+</head>
+<body>
+<h2>Using Object constructor</h2>
+<h3>
+<script type="text/javascript">
+	var emp1=new Object();//one way of creating the objects
+	emp1.name="Rajesh"
+	emp1.age=25
+	emp1.salary=230000
+	emp1.designation="Developer"
+
+	var emp2=new Object();
+	emp2.name="Manajesh"
+	emp2.age=35
+	emp2.salary=2320000
+	emp2.designation="Manager"
+    
+    display(emp1)
+    display(emp2)
+</script>
+<hr>	
+<h2>second way of constructing objects[using function as a constructor]</h2>
+<script type="text/javascript">
+	function emp(n,a,s,d){
+		this.name=n;
+		this.age=a;
+		this.salary=s;
+		this.designation=d;
+	}
+	var e1=new emp("varshit",22,2222222,"Developer")  //it is a function which is treated as a constructor
+
+	var e2=new emp("raj",25,63393,"jr. Developer")
+	display(e1)
+	e1.name="varshit singh"
+	display(e1)
+	display(e2)
+</script>
+<hr>
+<h2>using json format</h2>
+<script type="text/javascript">
+	var emp={"name":"ramu","age":34,"salary":230000,"designation":"tester"}
+	display(emp)
+	emp.salary=5000055
+	display(emp)
+</script>
+<hr>
+<h2>using class and Constructor[ECMA script topic as in pure Js(OOPS)is not there]</h2>
+<script type="text/javascript">
+
+	class Employee{
+		constructor(name,age,salary,designation){
+			this.name=name;
+			this.age=age;
+			this.salary=salary;
+			this.designation=designation;
+		}
+		display(){
+			document.write("<br>"+this.name+"<br>");
+			document.write(this.age+"<br>");
+			document.write(this.salary+"<br>");
+			document.write(this.designation+"<br>");			
+		}
+	}
+
+	var employee1=new Employee("Harhsit",23,344004,"engineer");
+	employee1.display();
+
+</script>
+</body>
+</html>

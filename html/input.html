@@ -1,0 +1,38 @@
+<h1>
+	Form input Demo
+</h1>
+
+
+<h2>please login</h2>
+<form action="abc.html" method="POST"> <!-- action="" it should be sending te data to abc.html after  submission & method="post" to send the data without url (inside the requwst object for privacy)by default get method is used to send data in url which is not safe as data is vsible -->
+	usernmae <input type="text" name="t1"><br> <!-- by default input type tag is "text"-->
+	password <input type="password" name="t2"><br>
+	<input type="submit" value="LOGIN">
+	<input type="button" value="EXIT">
+	<input type="reset" value="clear">
+</form>
+
+
+
+<h2>please Register</h2>
+<form action="abc.html"> 
+	<label>username</label> <input type="text" name="t1" required><br>
+	<label>password</label> <input type="password" name="pwd" required minlength="4"><br>
+	<label>confirm</label> <input type="password" name="cpwd" required><br>
+	<label>age</label> <input type="number" min="21" max="60" name="age"><br>
+	<label>Qualification</label> <select name="qual" multiple> <!-- name field is required inorder to send the datat to the req object   & multiple is to select the multiple options--> 
+									<option value="engineer">BE</option> <!-- by default value will be passed engineer if not clicked any option-->
+									<option>BTECH</option>
+									<option>MBA</option>
+									<option>MTECH<option>
+								</select><br>
+	<label>Date of Birth</label><input type="date" name="date"><br>
+	<label>gender </label>male<input type="radio" name="g" value="male">
+	female<input type="radio" name="g" value="female"> <!-- value for the name to be send as if checked female then inorder to display we name data we can pass value for that or how will let to know if clicker on female or male[if data is not imput byu the user then you can pass through value]-->
+	<br>
+	<input type="checkbox" name="married" checked> Employeed<br>
+	<input type="submit" value="LOGIN">
+	<input type="button" value="EXIT">
+	<input type="reset" value="clear">
+</form>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS OBJECTS</title>
+</head>
+<body>
+<h1>JS objects</h1>
+<script type="text/javascript">
+	var str1="hello everyone";//primitive datatype 
+	var str2 =new String("hello from str2");//object of string
+	document.write(str1+":"+str2+"<br>");
+	document.write(typeof(str1)+":"+typeof(str2)+"<br>");
+	document.write(str1.toUpperCase()+"<br>")
+</script>
+<hr>
+<h2>Date object</h2>
+<script type="text/javascript">
+	var d1=new Date();
+	document.write(d1+"<br>");
+	d1.setTime(32333332222);
+	document.write(d1+"<br>");
+	var d2=new Date();
+	d2.setMonth(15);//counting is 0-11 for months []
+	document.write(d2+"<br>");
+</script>
+<hr>
+<h2>Math object</h2>
+<script type="text/javascript">
+	document.write(Math.PI+"<br>");
+	document.write(Math.E+"<br>");
+	document.write(Math.pow(2,3)+"<br>");
+	document.write(Math.floor(2.33)+"<br>");
+</script>
+<hr>
+<h2>Number object</h2>
+<script type="text/javascript">
+	var a=10;//primitive
+	var d=new Number(10)//object
+	document.write(a+":"+typeof(a)+"<br>");
+	document.write(d+":"+typeof(d)+"<br>");
+</script>
+<hr>
+<h2>Boolean object</h2>
+<script type="text/javascript">
+	document.write("------------------------cases for true as all value passed as string will be true-")
+	document.write(new Boolean(true)+"<br>");
+	document.write(new Boolean(" ")+"<br>");
+	document.write(new Boolean('false')+"<br>");
+	document.write(new Boolean(1)+"<br>");//any except 0
+	document.write(new Boolean("null")+"<br>");
+	document.write("------------------------now cases for false are-")
+	document.write(new Boolean(false)+"<br>");
+	document.write(new Boolean("")+"<br>");
+	document.write(new Boolean(false)+"<br>");
+	document.write(new Boolean(0)+"<br>");
+	document.write(new Boolean(null)+"<br>");
+</script>
+</body>
+</html>
