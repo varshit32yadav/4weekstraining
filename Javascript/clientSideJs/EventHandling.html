@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event Handling</title>
+	<script type="text/javascript">
+		function abc(){
+			document.write("Good Morning ,Have a good Day");
+		}
+		function xyz(){
+			document.write("Enjoy your double click event handle")
+		}
+		function atoz(){
+			document.write("when you come over the Greet2 button")
+		}
+		function ztoa(){
+			document.write("when youc come out of the Greet3 button")
+		}
+		function notification(){
+			document.write("")
+		}
+	</script>
+</head>
+<body>
+<h1>Event Handling</h1>
+<br>
+<button>justForDemo</button>
+<input type="button" name=" another button" value="Greet1">
+<br><br>
+<input type="button" name="Greet" value="Greet2" onClick="abc()" >
+<input type="button" name="Greet" value="Greet3" ondblclick="xyz()" >
+<input type="button" name="Greet" value="Greet4" onmouseover="atoz()" >
+<input type="button" name="Greet" value="Greet5" onmouseout="ztoa()" >
+
+<hr>
+<form name="f1">
+<input type="text" placeholder="Enter name" name="t1" onchange="alert('just for demo')">
+</form>
+</body>
+</html>

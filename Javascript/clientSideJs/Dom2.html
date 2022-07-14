@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dom2</title>
+	<style type="text/css">
+		h1{
+		    text-align: center;
+		    color: blue;	
+		}
+	</style>
+	<script type="text/javascript">
+		var flag=true;
+		function abc() {
+			if(flag){
+				var str=`
+						<form action="abc.html">
+								<h3>
+									username:<input type="text" name="t1"><br>
+									password:<input type="password" name="pwd"><br>
+									<input type="submit" name="" value="LOGIN">
+									<input type="reset" name="RESET"><br>
+								</h3>
+						</form>`
+				document.getElementById("d1").innerHTML=str;
+				document.getElementById("s1").innerText="HIDE";
+				document.getElementById("s1").style.color="RED";
+			}
+			else{
+				document.getElementById("d1").innerHTML = ""	
+				document.getElementById("s1").innerText = "LOGIN"
+				document.getElementById("s1").style.color = "BLUE"
+			}
+			flag=!flag
+		}
+	</script>
+</head>
+<body>
+<h1>Document Object Model</h1>
+<hr>
+<h1>Have a good day</h1>
+<hr>
+<h3 onClick="abc()"><span id="s1" style="color: blue;">LOGIN</span></h3>
+<div id="d1"></div>
+<hr>
+<h1>Just for the Demo of DOM</h1>
+</body>
+</html>

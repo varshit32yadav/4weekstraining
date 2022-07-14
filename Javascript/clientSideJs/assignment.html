@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf 8">
+ 	<title>Assignment</title>
+ 	<h3>types of ways to access the data from the form</h3>
+ 	<script type="text/javascript">
+ 		function calc(a,b,c){
+ 			switch(c){
+ 				case "add":     var res=parseInt(a)+parseInt(b);
+ 				    			document.f1.result.value=res;
+ 				    			break;
+ 
+ 			    case "subtract":var res=parseInt(a) parseInt(b);
+ 			  					document.f1.result.value=res;
+ 			  					break;
+ 
+ 			  	case "multiply":var res=parseInt(a)*parseInt(b);
+ 								document.f1.result.value=res;
+ 								break;
+ 
+ 				case "divide":  var res=parseInt(a)/parseInt(b);
+ 							    document.f1.result.value=res;
+ 							    break;
+ 
+ 				case "exit":    var flag=confirm("are sure you want to exit ");
+ 							    if(flag)close();
+ 							    else alert("continue to calculate")
+ 							    break;
+ 			}
+ 		}
+ 	</script>
+ </head>
+ <body>
+ <h1>Event Handling</h1>
+ <form name="f1">
+ enter value for a: <input type="text" name="t1"><br>
+ enter value for b:<input type="text" name="t2"><br>
+ Result:<input type="text" name="result" disabled><br>
+ <input type="button" name="a" value="add" onclick="calc(t1.value,t2.value,this.value)">
+ <input type="button" name="s" value="subtract" onclick="calc(t1.value,t2.value,this.value)">
+ <input type="button" name="d" value="divide" onclick="calc(t1.value,t2.value,this.value)">
+ <input type="button" name="m" value="multiply" onclick="calc(t1.value,t2.value,this.value)">
+ <input type="button" name="e" value="exit" onclick="calc(t1.value,t2.value,this.value)">
+ </form>
+ </body>
+ </html>
+ 
+ 

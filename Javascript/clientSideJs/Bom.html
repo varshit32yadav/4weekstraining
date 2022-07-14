@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>BOM</title>
+		<script>
+			function abc()
+			{
+				//location.href = "http://wissen.com";
+				location.assign("http://wissen.com");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Browser Object Model</h1>
+		<hr>
+		<h2>Window Object</h2>
+		<h3>
+			<script>
+				//window.alert("Just for Demo");
+				window.document.write("Just for Demo");
+				//window.close();
+			</script>
+		</h3>
+		<hr>
+		<h2>Location object</h2>
+		<h3>
+			<script>
+				document.write(window.location.href+"<br>");
+				document.write(window.location.hostname+"<br>");
+				document.write(window.location.pathname+"<br>");
+				document.write(window.location.protocol+"<br>");
+			</script>
+			<input type="button" value="WISSEN" onClick="abc()">
+		</h3>
+		<hr>
+		<h2>History object</h2>
+		<h3>
+			<script>
+				//history.back();
+				//history.forward();
+			</script>
+		</h3>
+		<hr>
+		<h2>Navigator object</h2>
+		<h3>
+			<script>
+				document.write(navigator.appName+"<br>")
+				document.write(navigator.appVersion+"<br>")
+				document.write(navigator.platform+"<br>")
+				document.write("Cookie enabled : "+navigator.cookieEnabled+"<br>")
+				document.write(navigator.appCodeName+"<br>")
+			</script>
+		</h3>
+		<hr>
+		<h2>Screen object</h2>
+		<h3>
+			<script>
+				document.write("Screen width : "+screen.width+"<br>")
+				document.write("Screen height : "+screen.height+"<br>")
+				document.write("Color depth : "+screen.colorDepth+"<br>")
+			</script>
+		</h3>
+	</body>
+</html>

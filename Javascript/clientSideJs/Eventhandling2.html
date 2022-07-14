@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event Handling</title>
+	<h3>types of ways to access the data from the form</h3>
+	<script type="text/javascript">
+
+		function abc(fname,lname){
+			alert("Welcome!"+fname+" "+lname);
+		}
+		function xyz(){
+			var fname=document.f1.t1.value;
+			var lname=document.f1.t2.value;
+			alert("Welcome2!"+fname+" "+lname);
+		}
+		function atoz(){  //it should ask me to fill the name on the fly with the help of prompt()
+            document.f1.t1.value=prompt("enter the first name");
+            document.f1.t2.value=prompt("enter the last name")
+			//alert("Welcome!"+fname+" "+lname);
+		}
+		function exit(){
+			var a=confirm("do your really want to exit")
+			if(a)
+				close();
+			else
+				alert("you choose to continue");
+		}
+        //clear and alter 
+
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("abc"=="abc");
+	</script>
+<h1>Event Handling2</h1>
+<form name="f1">
+first name: <input type="text" name="t1" onchange="alert('just for demo')"><br>
+last name:<input type="text" name="t2"><br>
+<input type="button" value="welcome" onclick="abc(t1.value,t2.value)">
+<input type="button" value="welcome2" onclick="xyz()">
+<input type="button" value="welcome3" onclick="atoz()">
+<input type="button" value="Exit" onclick="exit()">
+</form>
+</body>
+</html>
+
