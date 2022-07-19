@@ -1,4 +1,7 @@
-/*
+/*Types of for loops
+for(let i=0;i<ar.length;i++){
+	log(ar[i]);
+}
 for(let i in arr){
 	console.log(i);//prints the index in menas index for understanfing
 }

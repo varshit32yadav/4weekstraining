@@ -11,10 +11,11 @@ console.log("inside abc()"+x);
 console.log("X="+x);
 console.log("y="+y);
 console.log("Z="+z);
-//console.log("Z1="+z1);
+//console.log("Z1="+z1);//not available outside block
 
-
+const a=10;
+a=90;//error cant change value of constant //[added inthe ecma script]
 }
 abc();
 console.log("X="+x);
-//console.log("y="+y);
+//console.log("y="+y);//not available outside function

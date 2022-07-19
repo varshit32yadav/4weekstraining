@@ -11,3 +11,6 @@ function a(){
 }
 demo(a);
 demo(b);
+
+//higher order fucntion
+

@@ -41,7 +41,6 @@ var promise =new Promise(
 		}
 
 	)
-
 console.log("I am not waiting ");
 console.log("for the execution");
 
