@@ -95,6 +95,6 @@ List<Integer>l1=Arrays.asList(1,2,3);
          map.entrySet().stream().map(Map.Entry::getKey).forEach(System.out::println); //forEach can be used to write some logic but cant return anything
          map.entrySet().stream().map(Map.Entry::getValue).forEach(System.out::println);
          System.out.println("---------------------");
-        map.entrySet().stream().filter((me)->me.getKey()>3).map(Map.Entry::getValue).forEach(System.out::println); //print all the keys > 3 . here (me) in filter is taken as an entrySet()
+         map.entrySet().stream().filter((me)->me.getKey()>3).map(Map.Entry::getValue).forEach(System.out::println); //print all the keys > 3 . here (me) in filter is taken as an entrySet()
 
 */

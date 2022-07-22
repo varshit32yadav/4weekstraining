@@ -47,7 +47,7 @@ public class Assignment{
         mp2.entrySet().forEach(System.out::println);
 
         System.out.println("-----------------------top 5 senior most Employees-----------------------");
-        list.stream().sorted( (e1,e2)->(e2.age-e1.age)).limit(5).forEach(e->System.out.println(e.name +"- "+ e.age));
+        list.stream().sorted( (e1,e2)->(e2.age-e1.age) ).limit(5).forEach(e->System.out.println(e.name +"- "+ e.age));
 
         System.out.println("-----------------------Type of the Company-----------------------");
         Map<String,Long>mp3=list.stream().collect(Collectors.groupingBy(e->{
@@ -55,7 +55,7 @@ public class Assignment{
         	if(e.age>=30 && e.age<=40) return "Mid Age";
         	return "Senior Age" ;
         } , Collectors.counting()));
-         mp3.entrySet().forEach(System.out::println);
+         //mp3.entrySet().forEach(System.out::println);
          String ans = mp3.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
          System.out.println("REsult : "+ans);
 

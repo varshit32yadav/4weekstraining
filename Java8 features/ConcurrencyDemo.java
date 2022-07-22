@@ -6,16 +6,16 @@ public class ConcurrencyDemo{
 
 	public static void main(String[] args) {
 		
-		Semaphore sem=new Semaphore(1);
+		Semaphore sem=new Semaphore(1);// means 2 threads are there to acquire lock at same time 
 
 		new IncThread("Daniel",sem);
 		new DecThread("John", sem);
 		new IncThread("Robert",sem);
-		new IncThread("lata", sem);
-		new DecThread("apec",sem);
-		new DecThread("sutrs", sem);
-		new IncThread("kalu",sem);
-		new IncThread("vibh", sem);
+		//new IncThread("lata", sem);
+		//new DecThread("apec",sem);
+		// new DecThread("sutrs", sem);
+		// new IncThread("kalu",sem);
+		// new IncThread("vibh", sem);
 		
 	}
 }
@@ -34,9 +34,9 @@ class IncThread extends Thread{
 	public void run(){
 		try{
 			System.out.println(name +" is waiting for the permission");
-			sem.acquire();
-			System.out.println(name +" is got the permission");
-			for (int i=0;i<=5 ;i++ ) {
+			sem.acquire(); //lock acquired by the thread
+			System.out.println(name +"  got the permission");
+			for (int i=0;i<=2 ;i++ ) {
 				Shared.count++;
 				System.out.println(name +" "+Shared.count);
 				Thread.sleep(500);
@@ -46,7 +46,7 @@ class IncThread extends Thread{
 				System.out.println(e);
 		}
 		System.out.println(name +" is releasing the permission");
-		sem.release();
+		sem.release(); //lock released by the thread
 		System.out.println(name +" released the permission");
 		
 	}
@@ -64,7 +64,7 @@ class DecThread extends Thread{
 		try{
 			System.out.println(name +" is waiting for the permission");
 			sem.acquire();
-			System.out.println(name +" is got the permission");
+			System.out.println(name +"  got the permission");
 			for (int i=0;i<=5 ;i++ ) {
 				Shared.count--;
 				System.out.println(name +" "+Shared.count);
